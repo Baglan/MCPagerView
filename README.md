@@ -62,4 +62,7 @@ Here is a simple "go to page" code from the sample project:
 
 Alternatively, an object can observe the "MCPAGERVIEW_DID_UPDATE_NOTIFICTAION" notification on the default notification center:
 
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPageChange) name:MCPAGERVIEW_DID_UPDATE_NOTIFICTAION object:pagerView];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onPageChange)
+                                                 name:MCPAGERVIEW_DID_UPDATE_NOTIFICTAION
+                                               object:pagerView];
