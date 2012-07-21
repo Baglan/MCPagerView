@@ -6,7 +6,7 @@ Make a replacement for the UIPageControl, with a similar functionality but custo
 
 Here is a screenshot from the sample project:
 
-![Sample project screenshot](MCPagerView.png)
+![Sample project screenshot](https://github.com/Baglan/MCPagerView/blob/master/MCPagerView.png)
 
 ## License
 
