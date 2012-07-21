@@ -72,6 +72,17 @@
     self.page = [_pageViews indexOfObject:recognizer.view];
 }
 
+- (UIImageView *)imageViewForKey:(NSString *)key
+{
+    NSDictionary *imageData = [_images objectForKey:key];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[imageData objectForKey:@"normal"] highlightedImage:[imageData objectForKey:@"highlighted"]];
+    imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+    [imageView addGestureRecognizer:tgr];
+    
+    return imageView;
+}
+
 - (void)layoutSubviews
 {
     [_pageViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -84,22 +95,15 @@
     CGFloat xOffset = 0;
     for (int i=0; i<pages; i++) {
         NSString *key = [_pattern substringWithRange:NSMakeRange(i, 1)];
-        UIImageView *sourceImageView = [_images objectForKey:key];
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:sourceImageView.image highlightedImage:sourceImageView.highlightedImage];
+        UIImageView *imageView = [self imageViewForKey:key];
+        
         CGRect frame = imageView.frame;
         frame.origin.x = xOffset;
         imageView.frame = frame;
         imageView.highlighted = (i == self.page);
-        imageView.userInteractionEnabled = YES;
-        
-        UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
-        [imageView addGestureRecognizer:tgr];
         
         [self addSubview:imageView];
-        
         [_pageViews addObject:imageView];
-        
-        
         
         xOffset = xOffset + frame.size.width;
     }
@@ -107,8 +111,8 @@
 
 - (void)setImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage forKey:(NSString *)key
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image highlightedImage:highlightedImage];
-    [_images setObject:imageView forKey:key];
+    NSDictionary *imageData = [NSDictionary dictionaryWithObjectsAndKeys:image, @"normal", highlightedImage, @"highlighted", nil];
+    [_images setObject:imageData forKey:key];
     [self setNeedsLayout];
 }
 
