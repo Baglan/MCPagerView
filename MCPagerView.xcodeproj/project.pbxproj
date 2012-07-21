@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86D5790B15BA64B20025F83D /* MCPagerView.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D5790A15BA64B20025F83D /* MCPagerView.png */; };
 		86E5E62A15B9A622001A7579 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E5E62915B9A622001A7579 /* UIKit.framework */; };
 		86E5E62C15B9A622001A7579 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E5E62B15B9A622001A7579 /* Foundation.framework */; };
 		86E5E62E15B9A622001A7579 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E5E62D15B9A622001A7579 /* CoreGraphics.framework */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86D5790A15BA64B20025F83D /* MCPagerView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MCPagerView.png; sourceTree = "<group>"; };
 		86E5E62515B9A622001A7579 /* MCPagerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCPagerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E5E62915B9A622001A7579 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86E5E62B15B9A622001A7579 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,6 +83,7 @@
 		86E5E61A15B9A621001A7579 = {
 			isa = PBXGroup;
 			children = (
+				86D5790A15BA64B20025F83D /* MCPagerView.png */,
 				86E5E66815B9CE4C001A7579 /* LICENSE.md */,
 				86E5E66615B9CE40001A7579 /* README.md */,
 				86E5E64D15B9B8FB001A7579 /* Assets */,
@@ -227,6 +230,7 @@
 				86E5E66515B9BC71001A7579 /* c@2x.png in Resources */,
 				86E5E66715B9CE40001A7579 /* README.md in Resources */,
 				86E5E66915B9CE4C001A7579 /* LICENSE.md in Resources */,
+				86D5790B15BA64B20025F83D /* MCPagerView.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +356,7 @@
 				86E5E64515B9A622001A7579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
