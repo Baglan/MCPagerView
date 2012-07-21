@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define MCPAGERVIEW_DID_UPDATE_NOTIFICTAION @"MCPageViewDidUpdate"
+#define MCPAGERVIEW_DID_UPDATE_NOTIFICATION @"MCPageViewDidUpdate"
 
 @protocol MCPagerViewDelegate;
 

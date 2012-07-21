@@ -59,7 +59,7 @@
     }
     
     // Send update notification
-    [[NSNotificationCenter defaultCenter] postNotificationName:MCPAGERVIEW_DID_UPDATE_NOTIFICTAION object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:MCPAGERVIEW_DID_UPDATE_NOTIFICATION object:self];
 }
 
 - (NSInteger)numberOfPages

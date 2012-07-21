@@ -60,9 +60,9 @@ Here is a simple "go to page" code from the sample project:
 	    [scrollView setContentOffset:offset animated:YES];
 	}
 
-Alternatively, an object can observe the "MCPAGERVIEW_DID_UPDATE_NOTIFICTAION" notification on the default notification center:
+Alternatively, an object can observe the "MCPAGERVIEW_DID_UPDATE_NOTIFICATION" notification on the default notification center:
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(onPageChange)
-                                                 name:MCPAGERVIEW_DID_UPDATE_NOTIFICTAION
+                                                 name:MCPAGERVIEW_DID_UPDATE_NOTIFICATION
                                                object:pagerView];
